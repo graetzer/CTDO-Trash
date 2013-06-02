@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XM8-Kp-Tl7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Uploads Table View Controller - Uploads-->
+        <scene sceneID="bzj-q8-q6l">
+            <objects>
+                <tableViewController storyboardIdentifier="SGUploadsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uIo-2M-dCx" customClass="SGUploadsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="table" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tpK-tc-9xG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="J99-yF-2dJ" detailTextLabel="Bmi-nm-TEh" style="IBUITableViewCellStyleSubtitle" id="JI1-LN-t7Y">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J99-yF-2dJ">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-nm-TEh">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Uploads" id="lXh-lI-SXE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="OiK-DI-cEe">
+                            <connections>
+                                <segue destination="2" kind="push" identifier="showUploadForm" id="bhm-lc-1yb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJ4-dO-eAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-109" y="40"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VB0-JK-0Sj">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="XM8-Kp-Tl7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zRp-DH-wkp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uIo-2M-dCx" kind="relationship" relationship="rootViewController" id="vII-zC-zfr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ETL-cl-3rv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-643" y="40"/>
+        </scene>
+        <!--Upload Controller - Upload-->
+        <scene sceneID="5">
+            <objects>
+                <viewController storyboardIdentifier="SGUploadController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2" customClass="SGUploadController" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Gw4-Is-XCO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gültigkeit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Uq-fH-r2Q">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="G8g-lJ-0v2"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD6-hE-d3Y">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Upload">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="upload:" destination="2" eventType="touchUpInside" id="1MQ-m4-RV7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y6-rB-7NJ">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Wähle Foto/Video">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickFromLibrary:" destination="2" eventType="touchUpInside" id="aQD-1Y-C0Y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bitte zuerst eine Datei wählen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8H-DX-ivG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GWE-OW-3kz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rO-az-GFB">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="DwB-0R-r0z"/>
+                                    <constraint firstAttribute="height" constant="30" id="ckI-qX-WYX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Wählen">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseValidity:" destination="2" eventType="touchUpInside" id="CCG-So-WM9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2. Wähle eine Gültigkeitsdauer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4w-vR-qeq">
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3. Starte Upload" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elu-lu-jwk">
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1. Datei Wählen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJA-RJ-WqN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="scB-4z-odG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WD6-hE-d3Y" secondAttribute="bottom" constant="137" id="07h-w8-9cF"/>
+                            <constraint firstItem="e8H-DX-ivG" firstAttribute="centerX" secondItem="Gw4-Is-XCO" secondAttribute="centerX" type="default" id="10x-Sr-eSr"/>
+                            <constraint firstItem="e8H-DX-ivG" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="100" id="ASg-y7-fVc"/>
+                            <constraint firstAttribute="trailing" secondItem="jJA-RJ-WqN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Aoa-3X-sRY"/>
+                            <constraint firstItem="WD6-hE-d3Y" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="236" id="GeP-aV-82E"/>
+                            <constraint firstItem="6y6-rB-7NJ" firstAttribute="centerX" secondItem="e8H-DX-ivG" secondAttribute="centerX" type="default" id="JUJ-J2-2p6"/>
+                            <constraint firstItem="Elu-lu-jwk" firstAttribute="top" secondItem="8Uq-fH-r2Q" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Jvf-4H-f4x"/>
+                            <constraint firstItem="2rO-az-GFB" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="168" id="LO5-kK-6Yn"/>
+                            <constraint firstItem="jJA-RJ-WqN" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Lms-jQ-AW4"/>
+                            <constraint firstItem="6y6-rB-7NJ" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="50" id="NaE-xc-1iV"/>
+                            <constraint firstAttribute="trailing" secondItem="Elu-lu-jwk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="O8g-Q7-Pwn"/>
+                            <constraint firstItem="2rO-az-GFB" firstAttribute="leading" secondItem="8Uq-fH-r2Q" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="T7a-yX-Ahw"/>
+                            <constraint firstAttribute="trailing" secondItem="2rO-az-GFB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="TCL-jH-aaO"/>
+                            <constraint firstItem="Elu-lu-jwk" firstAttribute="centerX" secondItem="WD6-hE-d3Y" secondAttribute="centerX" type="default" id="UBb-cf-ki1"/>
+                            <constraint firstAttribute="trailing" secondItem="R4w-vR-qeq" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VPh-tz-hXz"/>
+                            <constraint firstItem="R4w-vR-qeq" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="YoL-mm-J1r"/>
+                            <constraint firstItem="8Uq-fH-r2Q" firstAttribute="top" secondItem="R4w-vR-qeq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dIw-2R-eyA"/>
+                            <constraint firstItem="jJA-RJ-WqN" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="20" symbolic="YES" type="default" id="eeW-PJ-Fdb"/>
+                            <constraint firstItem="Elu-lu-jwk" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jvb-Rh-7Tr"/>
+                            <constraint firstItem="R4w-vR-qeq" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="137" id="kof-e2-2aQ"/>
+                            <constraint firstItem="8Uq-fH-r2Q" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qi6-iO-Phf"/>
+                            <constraint firstAttribute="trailing" secondItem="e8H-DX-ivG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uRa-s4-yxZ"/>
+                            <constraint firstItem="e8H-DX-ivG" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yry-S7-Oyh"/>
+                        </constraints>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Upload" id="8hD-xw-ac8"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="e8H-DX-ivG" id="9h8-ZI-bEd"/>
+                        <outlet property="validityField" destination="8Uq-fH-r2Q" id="JkF-fz-kgu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333" y="40"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SGUploadController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SGUploadController.h"/>
+            <relationships>
+                <relationship kind="action" name="chooseValidity:"/>
+                <relationship kind="action" name="pickFromLibrary:"/>
+                <relationship kind="action" name="upload:"/>
+                <relationship kind="outlet" name="asciiTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="validityField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="SGUploadsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SGUploadsTableViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

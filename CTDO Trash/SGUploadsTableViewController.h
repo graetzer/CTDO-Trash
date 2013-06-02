@@ -1,5 +1,5 @@
 //
-//  SGViewController.h
+//  SGUploadsTableViewController.h
 //  CTDO Trash
 //
 //  Created by Simon Grätzer on 01.06.13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SGViewController : UIViewController
+@interface SGUploadsTableViewController : UITableViewController
 
 @end

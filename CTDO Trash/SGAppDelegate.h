@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class AFHTTPClient;
+
 @interface SGAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) AFHTTPClient *httpClient;
 
 @end
+
+extern SGAppDelegate const *appDelegate;
