@@ -8,6 +8,8 @@
 
 #import "SGAppDelegate.h"
 #import "AFNetworking.h"
+#import "SGUploadController.h"
+#import "SGUploadsTableViewController.h"
 
 SGAppDelegate const *appDelegate;
 
@@ -16,20 +18,30 @@ SGAppDelegate const *appDelegate;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     appDelegate = self;
     
-    UIImage *img = [UIImage imageNamed:@"escheresque_ste"];
+    UIColor *blue = UIColorFromHEX(0x1F73FF);
+    UIImage *img = [UIImage imageNamed:@"escheresque"];
     
     [[UINavigationBar appearance] setBackgroundImage:img
                                        forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                           UITextAttributeTextColor:[UIColor darkTextColor]
+                                                           }];
     [[UITabBar appearance] setBackgroundImage:img];
+    [[UITabBar appearance] setSelectedImageTintColor:blue];
     [[UIToolbar appearance] setBackgroundImage:img forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
-    img = [[UIImage imageNamed:@"button-small-default"]
-           resizableImageWithCapInsets:UIEdgeInsetsMake(0, 5, 0, 5)];
+    
+    img = [UIImage imageNamed:@"empty"];
     [[UIBarButtonItem appearance] setBackgroundImage:img
                                             forState:UIControlStateNormal
                                           barMetrics:UIBarMetricsDefault];
     
-    img = [[UIImage imageNamed:@"button-back"]
-           resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 5)];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
+                                                           UITextAttributeTextColor:blue
+                                                           }
+                                                forState:UIControlStateNormal];
+    
+    
+    img = [UIImage imageNamed:@"empty-40"];
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:img
                                                       forState:UIControlStateNormal
                                                     barMetrics:UIBarMetricsDefault];
@@ -49,13 +61,28 @@ SGAppDelegate const *appDelegate;
 //    return YES;
 //}
 
-// Version 2
-//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-//  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-//    
-//    
-//    
-//    return YES;
-//}
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    SGUploadsTableViewController *table = (SGUploadsTableViewController *)self.window.rootViewController;
+    SGUploadController *upload = [table.storyboard instantiateViewControllerWithIdentifier:@"SGUploadController"];
+    [table prepareUploadController:upload];
+    
+    
+    CFStringRef pathExtension = (__bridge_retained CFStringRef)[url pathExtension];
+    CFStringRef type = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, pathExtension, NULL);
+    CFRelease(pathExtension);
+    NSString *mimeType = (__bridge_transfer NSString *)UTTypeCopyPreferredTagWithClass(type, kUTTagClassMIMEType);
+    if (type != NULL)
+        CFRelease(type);
+    
+    upload.fileName = url.lastPathComponent;
+    upload.mimeType = mimeType;
+    upload.uploadData = [NSData dataWithContentsOfURL:url];
+    
+    [table presentViewController:upload animated:YES completion:NULL];
+    
+    return YES;
+}
 
 @end

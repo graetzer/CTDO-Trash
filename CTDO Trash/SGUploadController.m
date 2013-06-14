@@ -12,22 +12,28 @@
 #import "DejalActivityView.h"
 
 @implementation SGUploadController {
-    NSArray *_validity;
-    NSUInteger _validitySelection;
+    NSArray *_expireStrings;
+    NSUInteger _expireSelection;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"knitting"]];
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"creampaper"]];
     
-    _validity = @[@"30 Minuten", @"60 Minuten", @"12 Stunden", @"24 Stunden",
+    UIImage *border = [UIImage imageNamed:@"border"];
+    border = [border resizableImageWithCapInsets:UIEdgeInsetsMake(8, 8, 8, 8)];
+    for (UIButton *button in self.allButtons) {
+        [button setBackgroundImage:border forState:UIControlStateNormal];
+    }
+    
+    _expireStrings = @[@"30 Minuten", @"60 Minuten", @"12 Stunden", @"24 Stunden",
                   @"1 Woche", @"1 Monat", @"3 Monate", @"6 Monate", @"12 Monate"];
     UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, 320, 216)];
     pickerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     pickerView.showsSelectionIndicator = YES;
     pickerView.delegate = self;
     pickerView.dataSource = self;
-    self.validityField.inputView = pickerView;
+    self.expiresField.inputView = pickerView;
     
     UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame: CGRectMake(0,0, 320, 44)];
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
@@ -35,27 +41,32 @@
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                                            target:nil action:nil];
     [toolbar setItems:@[space, doneButton] animated:NO];
-    self.validityField.inputAccessoryView = toolbar;
-    self.validityField.text = _validity[0];
-    _validitySelection = 0;
+    self.expiresField.inputAccessoryView = toolbar;
+    self.expiresField.text = _expireStrings[0];
+    _expireSelection = 0;
+    
+    if (self.uploadData != nil) {
+        self.selectFileButton.enabled = NO;
+        self.statusLabel.text = NSLocalizedString(@"Sie haben eine Datei gewählt", nil);
+    }
 }
 
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
     [super encodeRestorableStateWithCoder:coder];
-    [coder encodeInteger:_validitySelection forKey:@"validitySelection"];
+    [coder encodeInteger:_expireSelection forKey:@"expireSelection"];
 }
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
     [super decodeRestorableStateWithCoder:coder];
-    _validitySelection = [coder decodeIntegerForKey:@"validitySelection"];
+    _expireSelection = [coder decodeIntegerForKey:@"expireSelection"];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    return textField != self.validityField;
+    return textField != self.expiresField;
 }
 
 - (IBAction)inputAccessoryViewDidFinish:(id)sender {
-    [self.validityField resignFirstResponder];
+    [self.expiresField resignFirstResponder];
 }
 
 #pragma mark - Picker
@@ -65,16 +76,16 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
-    return _validity.count;
+    return _expireStrings.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return _validity[row];
+    return _expireStrings[row];
 }
 
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    self.validityField.text = _validity[row];
-    _validitySelection = row;
+    self.expiresField.text = _expireStrings[row];
+    _expireSelection = row;
 }
 
 #pragma  mark - Image Picker
@@ -86,7 +97,7 @@
     UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
     mediaUI.sourceType = type;
     mediaUI.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:type];
-    mediaUI.allowsEditing = YES;
+    mediaUI.allowsEditing = NO;
     mediaUI.delegate = self;
     [self presentViewController:mediaUI animated:YES completion:NULL];
 }
@@ -102,6 +113,7 @@
         
         if (editedImage) imageToUse = editedImage; 
         else imageToUse = originalImage;
+//UIImage *imageToUse = [info objectForKey: UIImagePickerControllerOriginalImage];
         
         self.fileName = @"picture.png";
         self.mimeType = @"image/png";
@@ -123,9 +135,10 @@
 }
 
 - (IBAction)upload:(id)sender {
-    [DejalBezelActivityView activityViewForView:appDelegate.window.rootViewController.view];
+    [DejalBezelActivityView activityViewForView:appDelegate.window.rootViewController.view
+                                      withLabel:NSLocalizedString(@"Upload…", nil)];
     
-    NSString *val = [NSString stringWithFormat:@"%d", _validitySelection+1];
+    NSString *val = [NSString stringWithFormat:@"%d", _expireSelection+1];
     NSDictionary *params = @{@"action":@"upload",
                              @"validity":val};
     NSMutableURLRequest *request = [appDelegate.httpClient multipartFormRequestWithMethod:@"POST"
@@ -140,8 +153,12 @@
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *op, id respObj){
             if (self.completionHandler) {
-                NSURL *url = op.response.URL;
-                NSDictionary *result = @{@"url":url.absoluteString, @"date":[NSDate date]};
+                NSString *url = op.response.URL.absoluteString;
+                NSRange r = [url rangeOfString:@"fileid="];
+                NSString *fileID = [url substringFromIndex:r.location + r.length];
+                
+                NSString *urlString = [NSString stringWithFormat:@"http://trash.ctdo.de/b/%@", fileID];
+                NSDictionary *result = @{@"url":urlString, @"date":[NSDate date], @"expires":self.expiresField.text};
                 self.completionHandler(result, nil);
             }
 
@@ -158,7 +175,7 @@
 }
 
 - (IBAction)chooseValidity:(id)sender {
-    [self.validityField becomeFirstResponder];
+    [self.expiresField becomeFirstResponder];
 }
 
 

@@ -16,8 +16,10 @@
 @property (nonatomic, strong) NSData *uploadData;
 
 @property (weak, nonatomic) IBOutlet UITextView *asciiTextView;
-@property (weak, nonatomic) IBOutlet UITextField *validityField;
+@property (weak, nonatomic) IBOutlet UITextField *expiresField;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UIButton *selectFileButton;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *allButtons;
 
 @property (copy, nonatomic) void (^completionHandler)(NSDictionary *, NSError *error);
 

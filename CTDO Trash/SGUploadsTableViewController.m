@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"knitting"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"creampaper"]];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
     _uploads = [[NSMutableArray alloc] initWithContentsOfFile:[self cachePath]];
@@ -41,22 +41,26 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showUploadForm"]) {
         SGUploadController *up = segue.destinationViewController;
-        up.completionHandler = ^(NSDictionary *result, NSError *error){
-            if (error) {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Fehler", nil)
-                                                                message:error.localizedDescription
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"Dismiss"
-                                                      otherButtonTitles:nil];
-                [alert show];
-                return;
-            }
-            
-            [_uploads insertObject:result atIndex:0];
-            [self.tableView reloadData];
-            [self saveUploads];
-        };
+        [self prepareUploadController:up];
     }
+}
+
+- (void)prepareUploadController:(SGUploadController *)uploadC {
+    uploadC.completionHandler = ^(NSDictionary *result, NSError *error){
+        if (error) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Fehler", nil)
+                                                            message:error.localizedDescription
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"ok"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
+        
+        [_uploads insertObject:result atIndex:0];
+        [self.tableView reloadData];
+        [self saveUploads];
+    };
 }
 
 #pragma mark - Table view data source
@@ -70,7 +74,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     cell.textLabel.text = _uploads[indexPath.row][@"url"];
-    cell.detailTextLabel.text = [_dateFormatter stringFromDate:_uploads[indexPath.row][@"date"]];
+    NSString *dateString = [_dateFormatter stringFromDate:_uploads[indexPath.row][@"date"]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", dateString, _uploads[indexPath.row][@"expires"]];
     
     return cell;
 }

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class SGUploadController;
 @interface SGUploadsTableViewController : UITableViewController
+
+- (void)prepareUploadController:(SGUploadController *)uploadC;
 
 @end
