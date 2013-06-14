@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4457.6" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="XM8-Kp-Tl7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XM8-Kp-Tl7">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.6"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Uploads Table View Controller - Uploads-->
@@ -24,13 +24,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J99-yF-2dJ">
-                                            <rect key="frame" x="10" y="3" width="37" height="21"/>
                                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-nm-TEh">
-                                            <rect key="frame" x="10" y="24" width="38" height="16"/>
                                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,7 +40,6 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Uploads" id="lXh-lI-SXE">
                         <barButtonItem key="leftBarButtonItem" image="plus.png" id="OiK-DI-cEe">
                             <connections>
@@ -59,7 +56,6 @@
         <scene sceneID="VB0-JK-0Sj">
             <objects>
                 <navigationController definesPresentationContext="YES" id="XM8-Kp-Tl7" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zRp-DH-wkp">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -80,7 +76,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="expirationField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gültigkeit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Uq-fH-r2Q">
-                                <rect key="frame" x="20" y="166" width="194" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -88,7 +83,6 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD6-hE-d3Y">
-                                <rect key="frame" x="118" y="233" width="80" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="3cn-IE-Pxa"/>
                                     <constraint firstAttribute="height" constant="42" id="tRo-U5-dfv"/>
@@ -106,7 +100,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y6-rB-7NJ">
-                                <rect key="frame" x="85" y="48" width="150" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Bhh-Jz-dd7"/>
                                     <constraint firstAttribute="height" constant="44" id="W8Y-th-P9H"/>
@@ -124,7 +117,6 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bitte zuerst eine Datei wählen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8H-DX-ivG">
-                                <rect key="frame" x="20" y="100" width="280" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="GWE-OW-3kz"/>
                                 </constraints>
@@ -133,7 +125,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rO-az-GFB">
-                                <rect key="frame" x="222" y="168" width="78" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="DwB-0R-r0z"/>
                                     <constraint firstAttribute="height" constant="30" id="ckI-qX-WYX"/>
@@ -151,54 +142,62 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2. Wähle eine Gültigkeitsdauer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4w-vR-qeq">
-                                <rect key="frame" x="20" y="137" width="280" height="21"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3. Starte Upload" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elu-lu-jwk">
-                                <rect key="frame" x="20" y="204" width="280" height="21"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1. Datei Wählen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJA-RJ-WqN">
-                                <rect key="frame" x="20" y="20" width="280" height="21"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riz-JP-fmv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="tU4-0W-n4C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="R4w-vR-qeq" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2Bu-va-oxQ"/>
+                            <constraint firstAttribute="bottom" secondItem="WD6-hE-d3Y" secondAttribute="bottom" constant="118" id="3fC-58-XeS"/>
+                            <constraint firstAttribute="trailing" secondItem="Riz-JP-fmv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5BS-Fk-Z80"/>
                             <constraint firstItem="WD6-hE-d3Y" firstAttribute="top" secondItem="Elu-lu-jwk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="84m-eS-Mve"/>
-                            <constraint firstItem="Elu-lu-jwk" firstAttribute="leading" secondItem="8Uq-fH-r2Q" secondAttribute="leading" type="default" id="8Dp-QX-kIS"/>
                             <constraint firstAttribute="trailing" secondItem="jJA-RJ-WqN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Aoa-3X-sRY"/>
-                            <constraint firstItem="R4w-vR-qeq" firstAttribute="leading" secondItem="8Uq-fH-r2Q" secondAttribute="leading" type="default" id="F2k-Ih-4Bd"/>
+                            <constraint firstAttribute="trailing" secondItem="e8H-DX-ivG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Bji-fA-zK3"/>
+                            <constraint firstItem="Riz-JP-fmv" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Byh-2l-F7w"/>
+                            <constraint firstItem="2rO-az-GFB" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="189" id="D9h-Rj-aJV"/>
                             <constraint firstItem="6y6-rB-7NJ" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="48" id="IZi-4R-ePg"/>
                             <constraint firstItem="Elu-lu-jwk" firstAttribute="top" secondItem="8Uq-fH-r2Q" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Jvf-4H-f4x"/>
-                            <constraint firstItem="2rO-az-GFB" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="168" id="LO5-kK-6Yn"/>
                             <constraint firstItem="jJA-RJ-WqN" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Lms-jQ-AW4"/>
                             <constraint firstItem="6y6-rB-7NJ" firstAttribute="centerX" secondItem="jJA-RJ-WqN" secondAttribute="centerX" type="default" id="NIg-du-YZW"/>
-                            <constraint firstAttribute="bottom" secondItem="WD6-hE-d3Y" secondAttribute="bottom" constant="141" id="Rj9-qN-Ecn"/>
+                            <constraint firstItem="R4w-vR-qeq" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OdP-zS-hsg"/>
                             <constraint firstItem="2rO-az-GFB" firstAttribute="leading" secondItem="8Uq-fH-r2Q" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="T7a-yX-Ahw"/>
-                            <constraint firstItem="R4w-vR-qeq" firstAttribute="leading" secondItem="e8H-DX-ivG" secondAttribute="leading" type="default" id="Tka-Gh-iNd"/>
-                            <constraint firstItem="2rO-az-GFB" firstAttribute="trailing" secondItem="Elu-lu-jwk" secondAttribute="trailing" type="default" id="UO6-be-EUW"/>
-                            <constraint firstItem="e8H-DX-ivG" firstAttribute="trailing" secondItem="jJA-RJ-WqN" secondAttribute="trailing" type="default" id="YdR-E1-0yr"/>
-                            <constraint firstItem="R4w-vR-qeq" firstAttribute="trailing" secondItem="2rO-az-GFB" secondAttribute="trailing" type="default" id="Yok-7s-shA"/>
-                            <constraint firstItem="jJA-RJ-WqN" firstAttribute="leading" secondItem="e8H-DX-ivG" secondAttribute="leading" type="default" id="ZWW-3i-TnV"/>
-                            <constraint firstItem="e8H-DX-ivG" firstAttribute="trailing" secondItem="R4w-vR-qeq" secondAttribute="trailing" type="default" id="cWh-cE-WQd"/>
-                            <constraint firstItem="jJA-RJ-WqN" firstAttribute="centerX" secondItem="Gw4-Is-XCO" secondAttribute="centerX" type="default" id="d3c-gc-p07"/>
+                            <constraint firstItem="Riz-JP-fmv" firstAttribute="top" secondItem="e8H-DX-ivG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VqU-aC-6P3"/>
+                            <constraint firstItem="Elu-lu-jwk" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bHv-vu-zGH"/>
                             <constraint firstItem="8Uq-fH-r2Q" firstAttribute="top" secondItem="R4w-vR-qeq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dIw-2R-eyA"/>
+                            <constraint firstItem="8Uq-fH-r2Q" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dzl-jJ-Uqv"/>
                             <constraint firstItem="jJA-RJ-WqN" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="20" symbolic="YES" type="default" id="eeW-PJ-Fdb"/>
-                            <constraint firstItem="R4w-vR-qeq" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="137" id="kof-e2-2aQ"/>
+                            <constraint firstItem="e8H-DX-ivG" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="egj-gg-pTQ"/>
+                            <constraint firstAttribute="trailing" secondItem="2rO-az-GFB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fV5-5c-bat"/>
                             <constraint firstItem="e8H-DX-ivG" firstAttribute="top" secondItem="6y6-rB-7NJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nrD-nh-tfR"/>
+                            <constraint firstItem="Riz-JP-fmv" firstAttribute="centerX" secondItem="Gw4-Is-XCO" secondAttribute="centerX" type="default" id="q1Z-ID-Wtm"/>
+                            <constraint firstAttribute="trailing" secondItem="Elu-lu-jwk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="rrE-kF-pNM"/>
+                            <constraint firstItem="R4w-vR-qeq" firstAttribute="top" secondItem="Riz-JP-fmv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tjR-cM-fvT"/>
                             <constraint firstItem="WD6-hE-d3Y" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="118" id="uJx-mQ-kBt"/>
                         </constraints>
                     </scrollView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Upload" id="8hD-xw-ac8"/>
                     <connections>
                         <outlet property="expiresField" destination="8Uq-fH-r2Q" id="DDi-Zn-8Fg"/>
+                        <outlet property="fileSizeLabel" destination="Riz-JP-fmv" id="g3Z-i6-mVe"/>
                         <outlet property="selectFileButton" destination="6y6-rB-7NJ" id="Efz-nw-iTy"/>
                         <outlet property="statusLabel" destination="e8H-DX-ivG" id="9h8-ZI-bEd"/>
                         <outletCollection property="allButtons" destination="6y6-rB-7NJ" id="CH7-xY-wTE"/>
@@ -212,7 +211,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plus.png" width="1.600017786026001" height="1.600017786026001"/>
+        <image name="plus.png" width="20" height="20"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
@@ -227,6 +226,7 @@
                 <relationship kind="action" name="upload:"/>
                 <relationship kind="outlet" name="asciiTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="expiresField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="fileSizeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="selectFileButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
                 <relationship kind="outletCollection" name="allButtons" candidateClass="UIButton"/>

@@ -47,7 +47,13 @@
     
     if (self.uploadData != nil) {
         self.selectFileButton.enabled = NO;
-        self.statusLabel.text = NSLocalizedString(@"Sie haben bereits eine Datei gewählt", nil);
+        
+        NSUInteger size = self.uploadData.length;
+        self.statusLabel.text =  NSLocalizedString(@"Sie haben bereits eine Datei gewählt", nil);
+        if (size > 1024*1024) 
+            self.fileSizeLabel.text = [NSString stringWithFormat:@"Dateigröße: %.1f MBytes", size/(1024.*1024.)];
+        else 
+            self.fileSizeLabel.text = [NSString stringWithFormat:@"Dateigröße: %.1f KBytes", size/1024.];
     }
 }
 
@@ -105,6 +111,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
     
+    NSString *text;
     if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0) == kCFCompareEqualTo) {
         UIImage *originalImage, *editedImage, *imageToUse;
         editedImage = (UIImage *) [info objectForKey:UIImagePickerControllerEditedImage];
@@ -119,18 +126,27 @@
         self.mimeType = @"image/png";
         self.uploadData = UIImagePNGRepresentation(imageToUse);
         
-        self.statusLabel.text = NSLocalizedString(@"Sie haben ein Bild gewählt", nil);
-    }
-    
-    // Handle a movied picked from a photo album
-    if (CFStringCompare ((CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
+        text = NSLocalizedString(@"Sie haben ein Bild gewählt", nil);
+        
+    } else if (CFStringCompare ((CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
         NSURL *url = [info objectForKey: UIImagePickerControllerMediaURL];
         self.fileName = @"video.mov";//url.lastPathComponent;
         self.mimeType = @"video/mp4";
         self.uploadData = [NSData dataWithContentsOfURL:url];
         
-        self.statusLabel.text = NSLocalizedString(@"Sie haben ein Video gewählt", nil);
+        text = NSLocalizedString(@"Sie haben ein Video gewählt", nil);
     }
+    
+    NSUInteger size = self.uploadData.length;
+    self.statusLabel.text =  NSLocalizedString(@"Sie haben bereits eine Datei gewählt", nil);
+    if (size > 1024*1024)
+        self.fileSizeLabel.text = [NSString stringWithFormat:@"Dateigröße: %.1f MBytes", size/(1024.*1024.)];
+    else
+        self.fileSizeLabel.text = [NSString stringWithFormat:@"Dateigröße: %.1f KBytes", size/1024.];
+    
+    self.statusLabel.text = text;
+
+    
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 

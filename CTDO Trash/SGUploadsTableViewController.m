@@ -29,7 +29,7 @@
     _uploads = [[NSMutableArray alloc] initWithContentsOfFile:[self cachePath]];
     if (!_uploads) _uploads = [NSMutableArray arrayWithCapacity:10];
     _dateFormatter = [NSDateFormatter new];
-    [_dateFormatter setDateFormat:@"dd.MM.yyyy hh:mm"];
+    [_dateFormatter setDateFormat:@"dd.MM.yyyy HH:mm"];
 }
 
 - (void)saveUploads {
