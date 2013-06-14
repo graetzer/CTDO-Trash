@@ -44,7 +44,7 @@
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Uploads" id="lXh-lI-SXE">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="add" id="OiK-DI-cEe">
+                        <barButtonItem key="leftBarButtonItem" image="plus.png" id="OiK-DI-cEe">
                             <connections>
                                 <segue destination="2" kind="push" identifier="showUploadForm" id="bhm-lc-1yb"/>
                             </connections>
@@ -211,6 +211,9 @@
             <point key="canvasLocation" x="333" y="40"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus.png" width="1.600017786026001" height="1.600017786026001"/>
+    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

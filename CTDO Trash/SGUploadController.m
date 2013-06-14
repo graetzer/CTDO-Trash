@@ -47,7 +47,7 @@
     
     if (self.uploadData != nil) {
         self.selectFileButton.enabled = NO;
-        self.statusLabel.text = NSLocalizedString(@"Sie haben eine Datei gewählt", nil);
+        self.statusLabel.text = NSLocalizedString(@"Sie haben bereits eine Datei gewählt", nil);
     }
 }
 

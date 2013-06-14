@@ -24,8 +24,10 @@ SGAppDelegate const *appDelegate;
     [[UINavigationBar appearance] setBackgroundImage:img
                                        forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTitleTextAttributes:@{
-                                                           UITextAttributeTextColor:[UIColor darkTextColor]
-                                                           }];
+                                     UITextAttributeFont:[UIFont fontWithName:@"Verdana" size:18],
+                                UITextAttributeTextColor:[UIColor darkTextColor],
+                          UITextAttributeTextShadowColor:[UIColor clearColor]}];
+    
     [[UITabBar appearance] setBackgroundImage:img];
     [[UITabBar appearance] setSelectedImageTintColor:blue];
     [[UIToolbar appearance] setBackgroundImage:img forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
@@ -36,8 +38,9 @@ SGAppDelegate const *appDelegate;
                                           barMetrics:UIBarMetricsDefault];
     
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{
-                                                           UITextAttributeTextColor:blue
-                                                           }
+                                     UITextAttributeFont:[UIFont fontWithName:@"Verdana" size:14],
+                                UITextAttributeTextColor:blue,
+                          UITextAttributeTextShadowColor:[UIColor clearColor]}
                                                 forState:UIControlStateNormal];
     
     
@@ -63,8 +66,9 @@ SGAppDelegate const *appDelegate;
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    UINavigationController *navC = (UINavigationController *)self.window.rootViewController;
     
-    SGUploadsTableViewController *table = (SGUploadsTableViewController *)self.window.rootViewController;
+    SGUploadsTableViewController *table = (SGUploadsTableViewController *)navC.viewControllers[0];
     SGUploadController *upload = [table.storyboard instantiateViewControllerWithIdentifier:@"SGUploadController"];
     [table prepareUploadController:upload];
     
@@ -80,7 +84,7 @@ SGAppDelegate const *appDelegate;
     upload.mimeType = mimeType;
     upload.uploadData = [NSData dataWithContentsOfURL:url];
     
-    [table presentViewController:upload animated:YES completion:NULL];
+    [navC pushViewController:upload animated:YES];
     
     return YES;
 }
