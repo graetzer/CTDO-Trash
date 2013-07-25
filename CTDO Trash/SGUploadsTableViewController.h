@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class SGUploadController;
+@protocol SGHandlerProtocol <NSObject>
+
+- (void)setCompletionHandler:(void (^)(NSDictionary*, NSError *))handler;
+
+@end
+
+@class SGLibraryUploadController;
 @interface SGUploadsTableViewController : UITableViewController
 
-- (void)prepareUploadController:(SGUploadController *)uploadC;
+- (void)prepareUploadController:(id<SGHandlerProtocol>)uploadC;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "SGUploadsTableViewController.h"
-#import "SGUploadController.h"
+#import "SGLibraryUploadController.h"
 #import "SGAppDelegate.h"
 
 @implementation SGUploadsTableViewController {
@@ -40,13 +40,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showUploadForm"]) {
-        SGUploadController *up = segue.destinationViewController;
+        SGLibraryUploadController *up = segue.destinationViewController;
         [self prepareUploadController:up];
     }
 }
 
-- (void)prepareUploadController:(SGUploadController *)uploadC {
-    uploadC.completionHandler = ^(NSDictionary *result, NSError *error){
+- (void)prepareUploadController:(id<SGHandlerProtocol>)uploadC {
+    void (^handler)(NSDictionary *, NSError *error) = ^(NSDictionary *result, NSError *error){
         if (error) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Fehler", nil)
                                                             message:error.localizedDescription
@@ -61,6 +61,8 @@
         [self.tableView reloadData];
         [self saveUploads];
     };
+    
+    [uploadC setCompletionHandler:handler];
 }
 
 #pragma mark - Table view data source
@@ -73,7 +75,10 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = _uploads[indexPath.row][@"url"];
+    NSString *name = _uploads[indexPath.row][@"name"];
+    if (name) cell.textLabel.text = name;
+    else cell.textLabel.text = _uploads[indexPath.row][@"url"];
+    
     NSString *dateString = [_dateFormatter stringFromDate:_uploads[indexPath.row][@"date"]];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", dateString, _uploads[indexPath.row][@"expires"]];
     

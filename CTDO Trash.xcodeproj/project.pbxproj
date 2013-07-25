@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F41AD39E17A1852200F53E3A /* SGUploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41AD39D17A1852200F53E3A /* SGUploadController.m */; };
 		F4876D9A176B2B02004A7DC5 /* escheresque.png in Resources */ = {isa = PBXBuildFile; fileRef = F4876D98176B2AF4004A7DC5 /* escheresque.png */; };
 		F4876D9B176B2B02004A7DC5 /* escheresque@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4876D99176B2AF4004A7DC5 /* escheresque@2x.png */; };
 		F4876DA0176B2CA8004A7DC5 /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = F4876D9C176B2CA2004A7DC5 /* border.png */; };
@@ -17,6 +18,7 @@
 		F4876DA7176B317A004A7DC5 /* creampaper.png in Resources */ = {isa = PBXBuildFile; fileRef = F4876DA5176B3170004A7DC5 /* creampaper.png */; };
 		F4876DAA176B377A004A7DC5 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = F4876DA8176B3773004A7DC5 /* plus.png */; };
 		F4876DAB176B377A004A7DC5 /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4876DA9176B3773004A7DC5 /* plus@2x.png */; };
+		F4ABC01017A1DED100CE0AF4 /* UIImage+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ABC00F17A1DED100CE0AF4 /* UIImage+Scaling.m */; };
 		F4F2D053175A15B3007E0569 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F2D052175A15B3007E0569 /* UIKit.framework */; };
 		F4F2D055175A15B3007E0569 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F2D054175A15B3007E0569 /* Foundation.framework */; };
 		F4F2D057175A15B3007E0569 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F2D056175A15B3007E0569 /* CoreGraphics.framework */; };
@@ -26,7 +28,7 @@
 		F4F2D067175A15B3007E0569 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F2D066175A15B3007E0569 /* Default@2x.png */; };
 		F4F2D069175A15B3007E0569 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F2D068175A15B3007E0569 /* Default-568h@2x.png */; };
 		F4F2D06C175A15B3007E0569 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F2D06A175A15B3007E0569 /* MainStoryboard.storyboard */; };
-		F4F2D06F175A15B3007E0569 /* SGUploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F2D06E175A15B3007E0569 /* SGUploadController.m */; };
+		F4F2D06F175A15B3007E0569 /* SGLibraryUploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F2D06E175A15B3007E0569 /* SGLibraryUploadController.m */; };
 		F4F2D07B175A16C9007E0569 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F4F2D078175A16C9007E0569 /* readme.txt */; };
 		F4F2D07E175A1981007E0569 /* SGUploadsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F2D07D175A1981007E0569 /* SGUploadsTableViewController.m */; };
 		F4F2D087175A22D4007E0569 /* empty-40.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F2D084175A22D4007E0569 /* empty-40.png */; };
@@ -54,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F41AD39C17A1852200F53E3A /* SGUploadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGUploadController.h; sourceTree = "<group>"; };
+		F41AD39D17A1852200F53E3A /* SGUploadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGUploadController.m; sourceTree = "<group>"; };
 		F4876D98176B2AF4004A7DC5 /* escheresque.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = escheresque.png; sourceTree = "<group>"; };
 		F4876D99176B2AF4004A7DC5 /* escheresque@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "escheresque@2x.png"; sourceTree = "<group>"; };
 		F4876D9C176B2CA2004A7DC5 /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		F4876DA5176B3170004A7DC5 /* creampaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creampaper.png; sourceTree = "<group>"; };
 		F4876DA8176B3773004A7DC5 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		F4876DA9176B3773004A7DC5 /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
+		F4ABC00E17A1DED100CE0AF4 /* UIImage+Scaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scaling.h"; sourceTree = "<group>"; };
+		F4ABC00F17A1DED100CE0AF4 /* UIImage+Scaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scaling.m"; sourceTree = "<group>"; };
 		F4F2D04F175A15B3007E0569 /* CTDO Trash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CTDO Trash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F2D052175A15B3007E0569 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F4F2D054175A15B3007E0569 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,8 +82,8 @@
 		F4F2D064175A15B3007E0569 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F4F2D066175A15B3007E0569 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F4F2D068175A15B3007E0569 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F4F2D06D175A15B3007E0569 /* SGUploadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUploadController.h; sourceTree = "<group>"; };
-		F4F2D06E175A15B3007E0569 /* SGUploadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUploadController.m; sourceTree = "<group>"; };
+		F4F2D06D175A15B3007E0569 /* SGLibraryUploadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGLibraryUploadController.h; sourceTree = "<group>"; };
+		F4F2D06E175A15B3007E0569 /* SGLibraryUploadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGLibraryUploadController.m; sourceTree = "<group>"; };
 		F4F2D078175A16C9007E0569 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		F4F2D07C175A1981007E0569 /* SGUploadsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGUploadsTableViewController.h; sourceTree = "<group>"; };
 		F4F2D07D175A1981007E0569 /* SGUploadsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGUploadsTableViewController.m; sourceTree = "<group>"; };
@@ -136,6 +142,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4ABC01117A1DED700CE0AF4 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				F4ABC00E17A1DED100CE0AF4 /* UIImage+Scaling.h */,
+				F4ABC00F17A1DED100CE0AF4 /* UIImage+Scaling.m */,
+				F4F2D08E175A2413007E0569 /* UIPlaceHolderTextView.h */,
+				F4F2D08F175A2413007E0569 /* UIPlaceHolderTextView.m */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
 		F4F2D046175A15B3007E0569 = {
 			isa = PBXGroup;
 			children = (
@@ -173,15 +190,16 @@
 		F4F2D058175A15B3007E0569 /* CTDO Trash */ = {
 			isa = PBXGroup;
 			children = (
-				F4F2D08E175A2413007E0569 /* UIPlaceHolderTextView.h */,
-				F4F2D08F175A2413007E0569 /* UIPlaceHolderTextView.m */,
+				F4ABC01117A1DED700CE0AF4 /* Dependencies */,
 				F4F2D083175A22D4007E0569 /* images */,
 				F4F2D075175A16C9007E0569 /* patterns */,
 				F4F2D061175A15B3007E0569 /* SGAppDelegate.h */,
 				F4F2D062175A15B3007E0569 /* SGAppDelegate.m */,
 				F4F2D06A175A15B3007E0569 /* MainStoryboard.storyboard */,
-				F4F2D06D175A15B3007E0569 /* SGUploadController.h */,
-				F4F2D06E175A15B3007E0569 /* SGUploadController.m */,
+				F4F2D06D175A15B3007E0569 /* SGLibraryUploadController.h */,
+				F4F2D06E175A15B3007E0569 /* SGLibraryUploadController.m */,
+				F41AD39C17A1852200F53E3A /* SGUploadController.h */,
+				F41AD39D17A1852200F53E3A /* SGUploadController.m */,
 				F4F2D07C175A1981007E0569 /* SGUploadsTableViewController.h */,
 				F4F2D07D175A1981007E0569 /* SGUploadsTableViewController.m */,
 				F4F2D059175A15B3007E0569 /* Supporting Files */,
@@ -364,7 +382,7 @@
 			files = (
 				F4F2D05F175A15B3007E0569 /* main.m in Sources */,
 				F4F2D063175A15B3007E0569 /* SGAppDelegate.m in Sources */,
-				F4F2D06F175A15B3007E0569 /* SGUploadController.m in Sources */,
+				F4F2D06F175A15B3007E0569 /* SGLibraryUploadController.m in Sources */,
 				F4F2D07E175A1981007E0569 /* SGUploadsTableViewController.m in Sources */,
 				F4F2D090175A2413007E0569 /* UIPlaceHolderTextView.m in Sources */,
 				F4F2D0E1175AB554007E0569 /* DejalActivityView.m in Sources */,
@@ -377,6 +395,8 @@
 				F4F2D107175ABCF0007E0569 /* AFURLConnectionOperation.m in Sources */,
 				F4F2D108175ABCF0007E0569 /* AFXMLRequestOperation.m in Sources */,
 				F4F2D109175ABCF0007E0569 /* UIImageView+AFNetworking.m in Sources */,
+				F41AD39E17A1852200F53E3A /* SGUploadController.m in Sources */,
+				F4ABC01017A1DED100CE0AF4 /* UIImage+Scaling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "SGAppDelegate.h"
 #import "AFNetworking.h"
 #import "SGUploadController.h"
+#import "SGLibraryUploadController.h"
 #import "SGUploadsTableViewController.h"
 
 SGAppDelegate const *appDelegate;
@@ -24,7 +25,7 @@ SGAppDelegate const *appDelegate;
     [[UINavigationBar appearance] setBackgroundImage:img
                                        forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTitleTextAttributes:@{
-                                     UITextAttributeFont:[UIFont fontWithName:@"Verdana" size:18],
+     //UITextAttributeFont:[UIFont fontWithName:@"Verdana" size:18],
                                 UITextAttributeTextColor:[UIColor darkTextColor],
                           UITextAttributeTextShadowColor:[UIColor clearColor]}];
     
@@ -38,7 +39,7 @@ SGAppDelegate const *appDelegate;
                                           barMetrics:UIBarMetricsDefault];
     
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{
-                                     UITextAttributeFont:[UIFont fontWithName:@"Verdana" size:14],
+     //UITextAttributeFont:[UIFont fontWithName:@"Verdana" size:14],
                                 UITextAttributeTextColor:blue,
                           UITextAttributeTextShadowColor:[UIColor clearColor]}
                                                 forState:UIControlStateNormal];
