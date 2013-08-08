@@ -10,22 +10,21 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "SGUploadsTableViewController.h"
 
-@interface SGLibraryUploadController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate,
+@interface SGImagePickerController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate,
 UIImagePickerControllerDelegate, UITextFieldDelegate, UINavigationControllerDelegate, SGHandlerProtocol>
 
 @property (weak, nonatomic) IBOutlet UITextField *imageSizeField;
-@property (weak, nonatomic) IBOutlet UITextField *expiresField;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *fileSizeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *qualityLabel;
 @property (weak, nonatomic) IBOutlet UIButton *imageSizeButton;
 @property (weak, nonatomic) IBOutlet UIButton *selectFileButton;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *allButtons;
+@property (weak, nonatomic) IBOutlet UISlider *qualitySlider;
 
 @property (copy, nonatomic) void (^completionHandler)(NSDictionary *, NSError *);
 
 - (IBAction)pickFromLibrary:(id)sender;
-- (IBAction)upload:(id)sender;
-- (IBAction)chooseValidity:(id)sender;
 - (IBAction)chooseImageSize:(id)sender;
+- (IBAction)changeQuality:(id)sender;
 
 @end

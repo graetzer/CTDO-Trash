@@ -125,7 +125,7 @@
         }
         
         [DejalBezelActivityView removeViewAnimated:YES];
-        [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
                                      failure:^(AFHTTPRequestOperation *op, NSError *error){
                                          if (self.completionHandler) self.completionHandler(nil, error);

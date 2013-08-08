@@ -28,7 +28,7 @@
 		F4F2D067175A15B3007E0569 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F2D066175A15B3007E0569 /* Default@2x.png */; };
 		F4F2D069175A15B3007E0569 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F2D068175A15B3007E0569 /* Default-568h@2x.png */; };
 		F4F2D06C175A15B3007E0569 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F2D06A175A15B3007E0569 /* MainStoryboard.storyboard */; };
-		F4F2D06F175A15B3007E0569 /* SGLibraryUploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F2D06E175A15B3007E0569 /* SGLibraryUploadController.m */; };
+		F4F2D06F175A15B3007E0569 /* SGImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F2D06E175A15B3007E0569 /* SGImagePickerController.m */; };
 		F4F2D07B175A16C9007E0569 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F4F2D078175A16C9007E0569 /* readme.txt */; };
 		F4F2D07E175A1981007E0569 /* SGUploadsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F2D07D175A1981007E0569 /* SGUploadsTableViewController.m */; };
 		F4F2D087175A22D4007E0569 /* empty-40.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F2D084175A22D4007E0569 /* empty-40.png */; };
@@ -82,8 +82,8 @@
 		F4F2D064175A15B3007E0569 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F4F2D066175A15B3007E0569 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F4F2D068175A15B3007E0569 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F4F2D06D175A15B3007E0569 /* SGLibraryUploadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGLibraryUploadController.h; sourceTree = "<group>"; };
-		F4F2D06E175A15B3007E0569 /* SGLibraryUploadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGLibraryUploadController.m; sourceTree = "<group>"; };
+		F4F2D06D175A15B3007E0569 /* SGImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGImagePickerController.h; sourceTree = "<group>"; };
+		F4F2D06E175A15B3007E0569 /* SGImagePickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGImagePickerController.m; sourceTree = "<group>"; };
 		F4F2D078175A16C9007E0569 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		F4F2D07C175A1981007E0569 /* SGUploadsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGUploadsTableViewController.h; sourceTree = "<group>"; };
 		F4F2D07D175A1981007E0569 /* SGUploadsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGUploadsTableViewController.m; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 				F4F2D061175A15B3007E0569 /* SGAppDelegate.h */,
 				F4F2D062175A15B3007E0569 /* SGAppDelegate.m */,
 				F4F2D06A175A15B3007E0569 /* MainStoryboard.storyboard */,
-				F4F2D06D175A15B3007E0569 /* SGLibraryUploadController.h */,
-				F4F2D06E175A15B3007E0569 /* SGLibraryUploadController.m */,
+				F4F2D06D175A15B3007E0569 /* SGImagePickerController.h */,
+				F4F2D06E175A15B3007E0569 /* SGImagePickerController.m */,
 				F41AD39C17A1852200F53E3A /* SGUploadController.h */,
 				F41AD39D17A1852200F53E3A /* SGUploadController.m */,
 				F4F2D07C175A1981007E0569 /* SGUploadsTableViewController.h */,
@@ -382,7 +382,7 @@
 			files = (
 				F4F2D05F175A15B3007E0569 /* main.m in Sources */,
 				F4F2D063175A15B3007E0569 /* SGAppDelegate.m in Sources */,
-				F4F2D06F175A15B3007E0569 /* SGLibraryUploadController.m in Sources */,
+				F4F2D06F175A15B3007E0569 /* SGImagePickerController.m in Sources */,
 				F4F2D07E175A1981007E0569 /* SGUploadsTableViewController.m in Sources */,
 				F4F2D090175A2413007E0569 /* UIPlaceHolderTextView.m in Sources */,
 				F4F2D0E1175AB554007E0569 /* DejalActivityView.m in Sources */,
@@ -492,14 +492,14 @@
 		F4F2D074175A15B3007E0569 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Simon Graetzer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Simon Graetzer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CTDO Trash/CTDO Trash-Prefix.pch";
 				INFOPLIST_FILE = "CTDO Trash/CTDO Trash-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "76F8DAC8-D4B7-43E5-9C19-8FF6DC95E89A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "76F8DAC8-D4B7-43E5-9C19-8FF6DC95E89A";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

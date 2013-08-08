@@ -9,7 +9,7 @@
 #import "SGAppDelegate.h"
 #import "AFNetworking.h"
 #import "SGUploadController.h"
-#import "SGLibraryUploadController.h"
+#import "SGImagePickerController.h"
 #import "SGUploadsTableViewController.h"
 
 SGAppDelegate const *appDelegate;
@@ -78,8 +78,7 @@ SGAppDelegate const *appDelegate;
     CFStringRef type = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, pathExtension, NULL);
     CFRelease(pathExtension);
     NSString *mimeType = (__bridge_transfer NSString *)UTTypeCopyPreferredTagWithClass(type, kUTTagClassMIMEType);
-    if (type != NULL)
-        CFRelease(type);
+    if (type != NULL) CFRelease(type);
     
     upload.fileName = url.lastPathComponent;
     upload.mimeType = mimeType;

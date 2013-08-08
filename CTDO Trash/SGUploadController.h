@@ -12,6 +12,7 @@
 
 @interface SGUploadController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UINavigationControllerDelegate, SGHandlerProtocol>
 
+// Inputs
 @property (nonatomic, strong) NSString *fileName;
 @property (nonatomic, strong) NSString *mimeType;
 @property (nonatomic, strong) NSData *uploadData;

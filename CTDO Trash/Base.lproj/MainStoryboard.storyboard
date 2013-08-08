@@ -43,7 +43,7 @@
                     <navigationItem key="navigationItem" title="Uploads" id="lXh-lI-SXE">
                         <barButtonItem key="leftBarButtonItem" image="plus.png" id="OiK-DI-cEe">
                             <connections>
-                                <segue destination="2" kind="push" identifier="showUploadForm" id="bhm-lc-1yb"/>
+                                <segue destination="2" kind="push" identifier="showImagePicker" id="bhm-lc-1yb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -67,41 +67,14 @@
             </objects>
             <point key="canvasLocation" x="-643" y="40"/>
         </scene>
-        <!--Library Upload Controller - Upload-->
+        <!--Image Picker Controller - Bild wählen-->
         <scene sceneID="5">
             <objects>
-                <viewController storyboardIdentifier="SGLibraryUploadController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2" customClass="SGLibraryUploadController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SGImagePickerController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2" customClass="SGImagePickerController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Gw4-Is-XCO">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="expirationField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gültigkeit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Uq-fH-r2Q">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8qN-SJ-u3c"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="2" id="G8g-lJ-0v2"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD6-hE-d3Y">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="3cn-IE-Pxa"/>
-                                    <constraint firstAttribute="height" constant="42" id="tRo-U5-dfv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Upload">
-                                    <color key="titleColor" red="0.062177097870000003" green="0.41655416010000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="upload:" destination="2" eventType="touchUpInside" id="1MQ-m4-RV7"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y6-rB-7NJ">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Bhh-Jz-dd7"/>
@@ -127,22 +100,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rO-az-GFB">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="81" id="1a9-bG-hV9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Wählen">
-                                    <color key="titleColor" red="0.062177097870000003" green="0.41655416010000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseValidity:" destination="2" eventType="touchUpInside" id="CCG-So-WM9"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdw-6o-6PY">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="mCo-w0-8OC"/>
@@ -159,17 +116,12 @@
                                     <action selector="chooseImageSize:" destination="2" eventType="touchUpInside" id="e9w-Ux-1mE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3. Wähle eine Gültigkeitsdauer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4w-vR-qeq">
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2. Wähle eine Foto Skalierung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7TQ-5w-afi">
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4. Starte Upload" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elu-lu-jwk">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3. Wähle Bild-Qualität" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hcV-ZM-aQj">
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -191,6 +143,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clq-xK-sTx">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="Bxy-ej-RHh"/>
+                                    <constraint firstAttribute="height" constant="21" id="nrb-OY-DYc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1/1" borderStyle="roundedRect" placeholder="Fotogröße" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jwv-H3-HZU">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FiV-TK-dcj"/>
@@ -201,62 +162,64 @@
                                     <outlet property="delegate" destination="2" id="AYH-PI-wyT"/>
                                 </connections>
                             </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8mF-UF-8zg">
+                                <connections>
+                                    <action selector="changeQuality:" destination="2" eventType="touchUpInside" id="xb2-0G-gHF"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="R4w-vR-qeq" firstAttribute="trailing" secondItem="jJA-RJ-WqN" secondAttribute="trailing" type="default" id="12m-U4-N2z"/>
-                            <constraint firstAttribute="trailing" secondItem="Elu-lu-jwk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7J6-te-iqO"/>
-                            <constraint firstItem="WD6-hE-d3Y" firstAttribute="top" secondItem="Elu-lu-jwk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="84m-eS-Mve"/>
+                            <constraint firstItem="hcV-ZM-aQj" firstAttribute="top" secondItem="Jwv-H3-HZU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="13v-2A-SLV"/>
+                            <constraint firstItem="Clq-xK-sTx" firstAttribute="leading" secondItem="8mF-UF-8zg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4gR-qr-F2K"/>
+                            <constraint firstAttribute="trailing" secondItem="Clq-xK-sTx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6Zx-aZ-slN"/>
+                            <constraint firstAttribute="bottom" secondItem="8mF-UF-8zg" secondAttribute="bottom" constant="136" id="6fs-1e-aKK"/>
                             <constraint firstAttribute="trailing" secondItem="7TQ-5w-afi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8kD-Em-Emj"/>
-                            <constraint firstItem="WD6-hE-d3Y" firstAttribute="centerX" secondItem="Gw4-Is-XCO" secondAttribute="centerX" type="default" id="9AZ-B7-4Fc"/>
                             <constraint firstItem="7TQ-5w-afi" firstAttribute="top" secondItem="Riz-JP-fmv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="A0e-QN-Mbg"/>
                             <constraint firstItem="Riz-JP-fmv" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Byh-2l-F7w"/>
                             <constraint firstAttribute="trailing" secondItem="e8H-DX-ivG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CaL-0e-WTp"/>
                             <constraint firstItem="6y6-rB-7NJ" firstAttribute="top" secondItem="jJA-RJ-WqN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="GOQ-eG-LF4"/>
-                            <constraint firstItem="2rO-az-GFB" firstAttribute="top" secondItem="R4w-vR-qeq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ivv-4z-hZa"/>
-                            <constraint firstItem="Elu-lu-jwk" firstAttribute="top" secondItem="8Uq-fH-r2Q" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Jvf-4H-f4x"/>
+                            <constraint firstItem="hcV-ZM-aQj" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Jy6-RG-0cg"/>
                             <constraint firstItem="jJA-RJ-WqN" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Lms-jQ-AW4"/>
                             <constraint firstItem="e8H-DX-ivG" firstAttribute="centerX" secondItem="6y6-rB-7NJ" secondAttribute="centerX" type="default" id="Lva-rD-sUB"/>
                             <constraint firstItem="7TQ-5w-afi" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Lyx-8B-hw2"/>
-                            <constraint firstItem="8Uq-fH-r2Q" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PCz-Lx-PrX"/>
                             <constraint firstAttribute="trailing" secondItem="Gdw-6o-6PY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QLh-9O-loh"/>
                             <constraint firstItem="Jwv-H3-HZU" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Qq8-nm-4p9"/>
-                            <constraint firstItem="Gdw-6o-6PY" firstAttribute="bottom" secondItem="Jwv-H3-HZU" secondAttribute="bottom" type="default" id="Vfi-xm-u32"/>
+                            <constraint firstItem="hcV-ZM-aQj" firstAttribute="top" secondItem="Gdw-6o-6PY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RlA-lc-aMr"/>
                             <constraint firstItem="Gdw-6o-6PY" firstAttribute="leading" secondItem="Jwv-H3-HZU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="X41-xZ-WqS"/>
-                            <constraint firstItem="R4w-vR-qeq" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="256" id="YrX-Du-7sQ"/>
-                            <constraint firstItem="8Uq-fH-r2Q" firstAttribute="trailing" secondItem="Jwv-H3-HZU" secondAttribute="trailing" type="default" id="d7v-lp-gAr"/>
+                            <constraint firstItem="8mF-UF-8zg" firstAttribute="top" secondItem="hcV-ZM-aQj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XWh-dw-h7L"/>
                             <constraint firstAttribute="trailing" secondItem="Riz-JP-fmv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dDw-hW-7EJ"/>
-                            <constraint firstItem="8Uq-fH-r2Q" firstAttribute="top" secondItem="R4w-vR-qeq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dIw-2R-eyA"/>
                             <constraint firstItem="Jwv-H3-HZU" firstAttribute="top" secondItem="7TQ-5w-afi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eBo-PW-d3W"/>
                             <constraint firstItem="jJA-RJ-WqN" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="20" symbolic="YES" type="default" id="eeW-PJ-Fdb"/>
                             <constraint firstItem="e8H-DX-ivG" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="egj-gg-pTQ"/>
-                            <constraint firstItem="Elu-lu-jwk" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="g3O-r4-ojY"/>
-                            <constraint firstItem="R4w-vR-qeq" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gVc-ON-5fm"/>
+                            <constraint firstItem="8mF-UF-8zg" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gap-3O-pMT"/>
+                            <constraint firstAttribute="trailing" secondItem="hcV-ZM-aQj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="imJ-Of-5pA"/>
                             <constraint firstItem="e8H-DX-ivG" firstAttribute="top" secondItem="6y6-rB-7NJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="inm-5S-7fy"/>
-                            <constraint firstItem="7TQ-5w-afi" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="158" id="izp-fh-xj1"/>
-                            <constraint firstItem="Elu-lu-jwk" firstAttribute="top" secondItem="2rO-az-GFB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lSQ-9V-52v"/>
-                            <constraint firstAttribute="bottom" secondItem="WD6-hE-d3Y" secondAttribute="bottom" constant="18" id="ovH-PL-1Wx"/>
                             <constraint firstItem="Gdw-6o-6PY" firstAttribute="top" secondItem="7TQ-5w-afi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qBC-wn-bGW"/>
-                            <constraint firstAttribute="trailing" secondItem="2rO-az-GFB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qrI-Xn-T1G"/>
-                            <constraint firstItem="Elu-lu-jwk" firstAttribute="centerX" secondItem="WD6-hE-d3Y" secondAttribute="centerX" type="default" id="smH-aL-0Jg"/>
+                            <constraint firstItem="Riz-JP-fmv" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="129" id="uKp-TZ-s9a"/>
+                            <constraint firstItem="Clq-xK-sTx" firstAttribute="top" secondItem="hcV-ZM-aQj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ytL-VX-xGF"/>
+                            <constraint firstItem="e8H-DX-ivG" firstAttribute="centerX" secondItem="Gw4-Is-XCO" secondAttribute="centerX" type="default" id="zqQ-ga-dcu"/>
                         </constraints>
                     </scrollView>
-                    <navigationItem key="navigationItem" title="Upload" id="8hD-xw-ac8"/>
+                    <navigationItem key="navigationItem" title="Bild wählen" id="8hD-xw-ac8">
+                        <barButtonItem key="rightBarButtonItem" title="weiter" id="rR0-3T-ASd">
+                            <connections>
+                                <segue destination="1Ng-LW-fbJ" kind="push" identifier="showUploadForm" id="Gbi-5i-HIg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="expiresField" destination="8Uq-fH-r2Q" id="DDi-Zn-8Fg"/>
                         <outlet property="fileSizeLabel" destination="Riz-JP-fmv" id="g3Z-i6-mVe"/>
                         <outlet property="imageSizeButton" destination="Gdw-6o-6PY" id="tS1-xl-jdI"/>
                         <outlet property="imageSizeField" destination="Jwv-H3-HZU" id="xZo-4E-7S6"/>
+                        <outlet property="qualityLabel" destination="Clq-xK-sTx" id="W8n-vx-6mD"/>
+                        <outlet property="qualitySlider" destination="8mF-UF-8zg" id="yiD-Nb-zcA"/>
                         <outlet property="selectFileButton" destination="6y6-rB-7NJ" id="Efz-nw-iTy"/>
                         <outlet property="statusLabel" destination="e8H-DX-ivG" id="9h8-ZI-bEd"/>
-                        <outletCollection property="allButtons" destination="6y6-rB-7NJ" id="CH7-xY-wTE"/>
-                        <outletCollection property="allButtons" destination="2rO-az-GFB" id="Gh5-PH-dTy"/>
-                        <outletCollection property="allButtons" destination="WD6-hE-d3Y" id="tI3-1T-XVP"/>
-                        <outletCollection property="allButtons" destination="Gdw-6o-6PY" id="cMT-Rl-l4G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="-240"/>
+            <point key="canvasLocation" x="327" y="40"/>
         </scene>
         <!--Upload Controller - Upload-->
         <scene sceneID="N8S-oP-wgS">
@@ -373,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6q-Nd-sQw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="355"/>
+            <point key="canvasLocation" x="763" y="40"/>
         </scene>
     </scenes>
     <resources>
@@ -383,21 +346,20 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
-        <class className="SGLibraryUploadController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SGLibraryUploadController.h"/>
+        <class className="SGImagePickerController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SGImagePickerController.h"/>
             <relationships>
+                <relationship kind="action" name="changeQuality:"/>
                 <relationship kind="action" name="chooseImageSize:"/>
-                <relationship kind="action" name="chooseValidity:"/>
                 <relationship kind="action" name="inputAccessoryViewDidFinish:"/>
                 <relationship kind="action" name="pickFromLibrary:"/>
-                <relationship kind="action" name="upload:"/>
-                <relationship kind="outlet" name="expiresField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="fileSizeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="imageSizeButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="imageSizeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="qualityLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="qualitySlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="selectFileButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="allButtons" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="SGUploadController" superclassName="UIViewController">

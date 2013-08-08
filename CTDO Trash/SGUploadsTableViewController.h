@@ -14,7 +14,7 @@
 
 @end
 
-@class SGLibraryUploadController;
+@class SGImagePickerController;
 @interface SGUploadsTableViewController : UITableViewController
 
 - (void)prepareUploadController:(id<SGHandlerProtocol>)uploadC;

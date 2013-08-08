@@ -7,7 +7,7 @@
 //
 
 #import "SGUploadsTableViewController.h"
-#import "SGLibraryUploadController.h"
+#import "SGImagePickerController.h"
 #import "SGAppDelegate.h"
 
 @implementation SGUploadsTableViewController {
@@ -39,8 +39,8 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showUploadForm"]) {
-        SGLibraryUploadController *up = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"showImagePicker"]) {
+        SGImagePickerController *up = segue.destinationViewController;
         [self prepareUploadController:up];
     }
 }
