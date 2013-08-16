@@ -72,6 +72,14 @@
     if ([self.imageSizeField isFirstResponder]) [self.imageSizeField resignFirstResponder];
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"showUploadForm"]
+        && _filename == nil) {
+        return NO;
+    }
+    return YES;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showUploadForm"]) {
         SGUploadController *up = segue.destinationViewController;

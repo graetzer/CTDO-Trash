@@ -78,19 +78,19 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
-    if (self.expiresField.inputAccessoryView == thePickerView) return _expireStrings.count;
+    if (self.expiresField.inputView == thePickerView) return _expireStrings.count;
     
     return 0;
 }
 
 - (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    if (self.expiresField.inputAccessoryView == thePickerView) return _expireStrings[row];
+    if (self.expiresField.inputView == thePickerView) return _expireStrings[row];
     
     return nil;
 }
 
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    if (self.expiresField.inputAccessoryView == thePickerView) {
+    if (self.expiresField.inputView == thePickerView) {
         self.expiresField.text = _expireStrings[row];
         _expireSelection = row;
     }

@@ -75,7 +75,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y6-rB-7NJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y6-rB-7NJ">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Bhh-Jz-dd7"/>
                                     <constraint firstAttribute="height" constant="44" id="W8Y-th-P9H"/>
@@ -100,7 +100,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdw-6o-6PY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdw-6o-6PY">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="mCo-w0-8OC"/>
                                 </constraints>
@@ -240,7 +240,7 @@
                                     <outlet property="delegate" destination="1Ng-LW-fbJ" id="z3D-Kx-LcY"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNo-4E-FGM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNo-4E-FGM">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="ChM-ed-lff"/>
                                     <constraint firstAttribute="width" constant="80" id="oMm-rp-riy"/>
@@ -257,7 +257,7 @@
                                     <action selector="upload:" destination="1Ng-LW-fbJ" eventType="touchUpInside" id="wdQ-Xh-c3J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJS-mM-h6l">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJS-mM-h6l">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="mhE-bq-5eO"/>
                                 </constraints>
@@ -304,22 +304,22 @@
                             <constraint firstAttribute="trailing" secondItem="e39-yX-Ugy" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1mK-Vj-Feh"/>
                             <constraint firstItem="e39-yX-Ugy" firstAttribute="centerX" secondItem="lNo-4E-FGM" secondAttribute="centerX" type="default" id="2n8-aZ-Khu"/>
                             <constraint firstAttribute="trailing" secondItem="aYe-AF-mnw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="70k-4n-9ZZ"/>
+                            <constraint firstItem="e39-yX-Ugy" firstAttribute="centerX" secondItem="MtV-OQ-Py0" secondAttribute="centerX" type="default" id="8Gh-Sz-kac"/>
+                            <constraint firstAttribute="bottom" secondItem="lNo-4E-FGM" secondAttribute="bottom" constant="196" id="AoR-WY-fpF"/>
                             <constraint firstItem="e39-yX-Ugy" firstAttribute="top" secondItem="2SD-dF-Xa4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BdN-fs-Fba"/>
                             <constraint firstItem="lNo-4E-FGM" firstAttribute="top" secondItem="e39-yX-Ugy" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Bjm-pU-NyY"/>
                             <constraint firstItem="2SD-dF-Xa4" firstAttribute="top" secondItem="Fd1-o4-qkV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Bt1-Md-4D4"/>
-                            <constraint firstItem="7nT-xz-YEr" firstAttribute="centerX" secondItem="MtV-OQ-Py0" secondAttribute="centerX" type="default" id="CIh-tj-dQ6"/>
                             <constraint firstItem="mJS-mM-h6l" firstAttribute="top" secondItem="Fd1-o4-qkV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LhT-3A-zS3"/>
                             <constraint firstAttribute="trailing" secondItem="7nT-xz-YEr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="O95-Tb-Y2f"/>
+                            <constraint firstItem="Fd1-o4-qkV" firstAttribute="top" secondItem="7nT-xz-YEr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Quk-2O-pYM"/>
                             <constraint firstItem="aYe-AF-mnw" firstAttribute="top" secondItem="MtV-OQ-Py0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="T7E-XN-xe4"/>
                             <constraint firstItem="2SD-dF-Xa4" firstAttribute="leading" secondItem="MtV-OQ-Py0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="WwS-Yq-cW9"/>
+                            <constraint firstItem="7nT-xz-YEr" firstAttribute="top" secondItem="aYe-AF-mnw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cXP-fy-Wgy"/>
                             <constraint firstItem="e39-yX-Ugy" firstAttribute="leading" secondItem="MtV-OQ-Py0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cdC-I8-5KL"/>
-                            <constraint firstItem="Fd1-o4-qkV" firstAttribute="top" secondItem="7nT-xz-YEr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="egx-qS-zRF"/>
-                            <constraint firstItem="7nT-xz-YEr" firstAttribute="top" secondItem="MtV-OQ-Py0" secondAttribute="top" constant="56" id="kz1-9z-pzS"/>
                             <constraint firstItem="Fd1-o4-qkV" firstAttribute="leading" secondItem="MtV-OQ-Py0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lAB-dp-VUa"/>
                             <constraint firstItem="mJS-mM-h6l" firstAttribute="leading" secondItem="2SD-dF-Xa4" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="n03-YU-EYg"/>
                             <constraint firstItem="7nT-xz-YEr" firstAttribute="leading" secondItem="MtV-OQ-Py0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nRv-Gk-log"/>
                             <constraint firstItem="Fd1-o4-qkV" firstAttribute="trailing" secondItem="mJS-mM-h6l" secondAttribute="trailing" type="default" id="qO2-EU-nFZ"/>
-                            <constraint firstAttribute="bottom" secondItem="lNo-4E-FGM" secondAttribute="bottom" constant="189" id="wm6-jr-7F9"/>
                             <constraint firstItem="e39-yX-Ugy" firstAttribute="top" secondItem="mJS-mM-h6l" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zBh-qs-cAd"/>
                             <constraint firstItem="aYe-AF-mnw" firstAttribute="leading" secondItem="MtV-OQ-Py0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zaE-Bg-cqU"/>
                         </constraints>
@@ -351,7 +351,6 @@
             <relationships>
                 <relationship kind="action" name="changeQuality:"/>
                 <relationship kind="action" name="chooseImageSize:"/>
-                <relationship kind="action" name="inputAccessoryViewDidFinish:"/>
                 <relationship kind="action" name="pickFromLibrary:"/>
                 <relationship kind="outlet" name="fileSizeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="imageSizeButton" candidateClass="UIButton"/>
