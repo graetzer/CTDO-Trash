@@ -18,6 +18,7 @@
     NSUInteger _imageSizeSelection;
     
     UIImage *_selectedImage;
+    NSURL *_url;
     NSData *_data;
     NSString *_filename;
 }
@@ -137,6 +138,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    _url = info[UIImagePickerControllerReferenceURL];
     
     NSString *text;
     if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0) == kCFCompareEqualTo) {
@@ -165,6 +167,7 @@
         self.imageSizeButton.enabled = NO;
         self.qualitySlider.enabled = NO;
     }
+    
     self.statusLabel.text = text;
     [self displayFileSize];
     [picker dismissViewControllerAnimated:YES completion:NULL];
@@ -185,10 +188,9 @@
 
 - (NSData *)dataForScaledImage {
     CGFloat q = self.qualitySlider.value;
-    
     if (!_selectedImage) return nil;
     else if (_imageSizeSelection == 0) return UIImageJPEGRepresentation(_selectedImage, q);
-    
+        
     CGSize size = _selectedImage.size;
     CGFloat factor = 1.f/((CGFloat)_imageSizeSelection+1);
     size.height *= factor;

@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XM8-Kp-Tl7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XM8-Kp-Tl7">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
-        <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Uploads Table View Controller - Uploads-->
         <scene sceneID="bzj-q8-q6l">
             <objects>
                 <tableViewController storyboardIdentifier="SGUploadsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uIo-2M-dCx" customClass="SGUploadsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="table" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tpK-tc-9xG">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="table" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tpK-tc-9xG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="J99-yF-2dJ" detailTextLabel="Bmi-nm-TEh" style="IBUITableViewCellStyleSubtitle" id="JI1-LN-t7Y">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JI1-LN-t7Y" id="3mp-FZ-ZBc">
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J99-yF-2dJ">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J99-yF-2dJ">
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-nm-TEh">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bmi-nm-TEh">
+                                            <rect key="frame" x="15" y="25" width="35" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
+                                </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Uploads" id="lXh-lI-SXE">
-                        <barButtonItem key="leftBarButtonItem" image="plus.png" id="OiK-DI-cEe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="OiK-DI-cEe">
                             <connections>
                                 <segue destination="2" kind="push" identifier="showImagePicker" id="bhm-lc-1yb"/>
                             </connections>
@@ -71,91 +71,92 @@
         <scene sceneID="5">
             <objects>
                 <viewController storyboardIdentifier="SGImagePickerController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2" customClass="SGImagePickerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7ES-me-zyF"/>
+                        <viewControllerLayoutGuide type="bottom" id="b3i-Yi-DVw"/>
+                    </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Gw4-Is-XCO">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y6-rB-7NJ">
+                                <rect key="frame" x="85" y="102" width="151" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Bhh-Jz-dd7"/>
-                                    <constraint firstAttribute="height" constant="44" id="W8Y-th-P9H"/>
+                                    <constraint firstAttribute="height" constant="44" id="cug-NO-wmM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Wähle Foto/Video">
                                     <color key="titleColor" red="0.062177097870000003" green="0.41655416010000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
                                     <action selector="pickFromLibrary:" destination="2" eventType="touchUpInside" id="aQD-1Y-C0Y"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bitte zuerst eine Datei wählen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8H-DX-ivG">
+                                <rect key="frame" x="20" y="154" width="280" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="GWE-OW-3kz"/>
+                                    <constraint firstAttribute="height" constant="21" id="uaB-U0-2Ze"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdw-6o-6PY">
+                                <rect key="frame" x="222" y="241" width="78" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="mCo-w0-8OC"/>
+                                    <constraint firstAttribute="width" constant="78" id="csp-sH-LTG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Wählen">
                                     <color key="titleColor" red="0.062177097870000003" green="0.41655416010000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
                                     <action selector="chooseImageSize:" destination="2" eventType="touchUpInside" id="e9w-Ux-1mE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2. Wähle eine Foto Skalierung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7TQ-5w-afi">
+                                <rect key="frame" x="20" y="210" width="280" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3. Wähle Bild-Qualität" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hcV-ZM-aQj">
+                                <rect key="frame" x="20" y="279" width="280" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1. Datei Wählen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJA-RJ-WqN">
+                                <rect key="frame" x="20" y="72" width="280" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="Pge-zH-k50"/>
-                                    <constraint firstAttribute="width" constant="297" id="vPi-rW-kEq"/>
+                                    <constraint firstAttribute="height" constant="22" id="fUW-g4-BOq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Aktuelle Dateigöße" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riz-JP-fmv">
+                                <rect key="frame" x="20" y="181" width="280" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="tU4-0W-n4C"/>
+                                    <constraint firstAttribute="height" constant="21" id="MIr-ai-Vd7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clq-xK-sTx">
+                                <rect key="frame" x="255" y="310" width="45" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="Bxy-ej-RHh"/>
-                                    <constraint firstAttribute="height" constant="21" id="nrb-OY-DYc"/>
+                                    <constraint firstAttribute="width" constant="45" id="ZDZ-J1-vbA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1/1" borderStyle="roundedRect" placeholder="Fotogröße" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jwv-H3-HZU">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="FiV-TK-dcj"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="241" width="194" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -163,45 +164,50 @@
                                 </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8mF-UF-8zg">
+                                <rect key="frame" x="18" y="310" width="231" height="34"/>
                                 <connections>
                                     <action selector="changeQuality:" destination="2" eventType="touchUpInside" id="xb2-0G-gHF"/>
                                 </connections>
                             </slider>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="hcV-ZM-aQj" firstAttribute="top" secondItem="Jwv-H3-HZU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="13v-2A-SLV"/>
-                            <constraint firstItem="Clq-xK-sTx" firstAttribute="leading" secondItem="8mF-UF-8zg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4gR-qr-F2K"/>
-                            <constraint firstAttribute="trailing" secondItem="Clq-xK-sTx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6Zx-aZ-slN"/>
-                            <constraint firstAttribute="bottom" secondItem="8mF-UF-8zg" secondAttribute="bottom" constant="136" id="6fs-1e-aKK"/>
-                            <constraint firstAttribute="trailing" secondItem="7TQ-5w-afi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8kD-Em-Emj"/>
-                            <constraint firstItem="7TQ-5w-afi" firstAttribute="top" secondItem="Riz-JP-fmv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="A0e-QN-Mbg"/>
-                            <constraint firstItem="Riz-JP-fmv" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Byh-2l-F7w"/>
-                            <constraint firstAttribute="trailing" secondItem="e8H-DX-ivG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CaL-0e-WTp"/>
-                            <constraint firstItem="6y6-rB-7NJ" firstAttribute="top" secondItem="jJA-RJ-WqN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="GOQ-eG-LF4"/>
-                            <constraint firstItem="hcV-ZM-aQj" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Jy6-RG-0cg"/>
-                            <constraint firstItem="jJA-RJ-WqN" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Lms-jQ-AW4"/>
-                            <constraint firstItem="e8H-DX-ivG" firstAttribute="centerX" secondItem="6y6-rB-7NJ" secondAttribute="centerX" type="default" id="Lva-rD-sUB"/>
-                            <constraint firstItem="7TQ-5w-afi" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Lyx-8B-hw2"/>
-                            <constraint firstAttribute="trailing" secondItem="Gdw-6o-6PY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QLh-9O-loh"/>
-                            <constraint firstItem="Jwv-H3-HZU" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Qq8-nm-4p9"/>
-                            <constraint firstItem="hcV-ZM-aQj" firstAttribute="top" secondItem="Gdw-6o-6PY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RlA-lc-aMr"/>
-                            <constraint firstItem="Gdw-6o-6PY" firstAttribute="leading" secondItem="Jwv-H3-HZU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="X41-xZ-WqS"/>
-                            <constraint firstItem="8mF-UF-8zg" firstAttribute="top" secondItem="hcV-ZM-aQj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XWh-dw-h7L"/>
-                            <constraint firstAttribute="trailing" secondItem="Riz-JP-fmv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dDw-hW-7EJ"/>
-                            <constraint firstItem="Jwv-H3-HZU" firstAttribute="top" secondItem="7TQ-5w-afi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eBo-PW-d3W"/>
-                            <constraint firstItem="jJA-RJ-WqN" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="20" symbolic="YES" type="default" id="eeW-PJ-Fdb"/>
-                            <constraint firstItem="e8H-DX-ivG" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="egj-gg-pTQ"/>
-                            <constraint firstItem="8mF-UF-8zg" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gap-3O-pMT"/>
-                            <constraint firstAttribute="trailing" secondItem="hcV-ZM-aQj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="imJ-Of-5pA"/>
-                            <constraint firstItem="e8H-DX-ivG" firstAttribute="top" secondItem="6y6-rB-7NJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="inm-5S-7fy"/>
-                            <constraint firstItem="Gdw-6o-6PY" firstAttribute="top" secondItem="7TQ-5w-afi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qBC-wn-bGW"/>
-                            <constraint firstItem="Riz-JP-fmv" firstAttribute="top" secondItem="Gw4-Is-XCO" secondAttribute="top" constant="129" id="uKp-TZ-s9a"/>
-                            <constraint firstItem="Clq-xK-sTx" firstAttribute="top" secondItem="hcV-ZM-aQj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ytL-VX-xGF"/>
-                            <constraint firstItem="e8H-DX-ivG" firstAttribute="centerX" secondItem="Gw4-Is-XCO" secondAttribute="centerX" type="default" id="zqQ-ga-dcu"/>
+                            <constraint firstItem="e8H-DX-ivG" firstAttribute="leading" secondItem="jJA-RJ-WqN" secondAttribute="leading" id="0NT-j4-AUv"/>
+                            <constraint firstItem="e8H-DX-ivG" firstAttribute="top" secondItem="6y6-rB-7NJ" secondAttribute="bottom" constant="8" symbolic="YES" id="0mc-Lc-9bh"/>
+                            <constraint firstItem="hcV-ZM-aQj" firstAttribute="top" secondItem="Jwv-H3-HZU" secondAttribute="bottom" constant="8" symbolic="YES" id="6pp-D9-Qej"/>
+                            <constraint firstItem="hcV-ZM-aQj" firstAttribute="leading" secondItem="8mF-UF-8zg" secondAttribute="leading" id="7h0-94-7S5"/>
+                            <constraint firstItem="Gdw-6o-6PY" firstAttribute="top" secondItem="7TQ-5w-afi" secondAttribute="bottom" constant="8" symbolic="YES" id="BCf-6s-vdg"/>
+                            <constraint firstItem="Riz-JP-fmv" firstAttribute="leading" secondItem="e8H-DX-ivG" secondAttribute="leading" id="BYT-ye-Ccu"/>
+                            <constraint firstAttribute="trailing" secondItem="jJA-RJ-WqN" secondAttribute="trailing" constant="20" id="E7m-QO-1Dk"/>
+                            <constraint firstItem="Clq-xK-sTx" firstAttribute="trailing" secondItem="hcV-ZM-aQj" secondAttribute="trailing" id="FJj-hU-Rrp"/>
+                            <constraint firstItem="Gdw-6o-6PY" firstAttribute="bottom" secondItem="Jwv-H3-HZU" secondAttribute="bottom" id="L66-4q-UAs"/>
+                            <constraint firstItem="jJA-RJ-WqN" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="20" symbolic="YES" id="MX3-us-Ozx"/>
+                            <constraint firstItem="Gdw-6o-6PY" firstAttribute="trailing" secondItem="7TQ-5w-afi" secondAttribute="trailing" id="Oo7-dP-AfD"/>
+                            <constraint firstItem="Clq-xK-sTx" firstAttribute="top" secondItem="hcV-ZM-aQj" secondAttribute="bottom" constant="8" symbolic="YES" id="Qn0-aI-WKf"/>
+                            <constraint firstItem="b3i-Yi-DVw" firstAttribute="top" secondItem="Clq-xK-sTx" secondAttribute="bottom" constant="149" id="X41-So-U7C"/>
+                            <constraint firstItem="7TQ-5w-afi" firstAttribute="trailing" secondItem="Riz-JP-fmv" secondAttribute="trailing" id="YF7-Xd-TbF"/>
+                            <constraint firstItem="6y6-rB-7NJ" firstAttribute="centerX" secondItem="e8H-DX-ivG" secondAttribute="centerX" id="YPt-ZK-obv"/>
+                            <constraint firstItem="Gdw-6o-6PY" firstAttribute="leading" secondItem="Jwv-H3-HZU" secondAttribute="trailing" constant="8" symbolic="YES" id="Ypg-Wl-OEc"/>
+                            <constraint firstItem="8mF-UF-8zg" firstAttribute="top" secondItem="hcV-ZM-aQj" secondAttribute="bottom" constant="8" symbolic="YES" id="bd0-An-iJm"/>
+                            <constraint firstItem="Riz-JP-fmv" firstAttribute="leading" secondItem="7TQ-5w-afi" secondAttribute="leading" id="dfa-BW-HNH"/>
+                            <constraint firstItem="6y6-rB-7NJ" firstAttribute="top" secondItem="jJA-RJ-WqN" secondAttribute="bottom" constant="8" symbolic="YES" id="eeU-Nq-zmI"/>
+                            <constraint firstItem="b3i-Yi-DVw" firstAttribute="top" secondItem="8mF-UF-8zg" secondAttribute="bottom" constant="137" id="gRQ-Mc-BCj"/>
+                            <constraint firstItem="Gdw-6o-6PY" firstAttribute="trailing" secondItem="hcV-ZM-aQj" secondAttribute="trailing" id="hYK-Nn-oQf"/>
+                            <constraint firstItem="Jwv-H3-HZU" firstAttribute="top" secondItem="7TQ-5w-afi" secondAttribute="bottom" constant="8" symbolic="YES" id="lDm-fX-3ZJ"/>
+                            <constraint firstAttribute="trailing" secondItem="e8H-DX-ivG" secondAttribute="trailing" constant="20" symbolic="YES" id="lvG-f4-q7c"/>
+                            <constraint firstItem="Riz-JP-fmv" firstAttribute="top" secondItem="e8H-DX-ivG" secondAttribute="bottom" constant="6" id="mL5-WI-5UH"/>
+                            <constraint firstItem="7TQ-5w-afi" firstAttribute="leading" secondItem="Jwv-H3-HZU" secondAttribute="leading" id="mmx-Ic-is7"/>
+                            <constraint firstItem="6y6-rB-7NJ" firstAttribute="leading" secondItem="Gw4-Is-XCO" secondAttribute="leading" constant="85" id="oiZ-Rt-04X"/>
+                            <constraint firstItem="7TQ-5w-afi" firstAttribute="top" secondItem="Riz-JP-fmv" secondAttribute="bottom" constant="8" symbolic="YES" id="pBy-EU-Bum"/>
+                            <constraint firstItem="hcV-ZM-aQj" firstAttribute="leading" secondItem="Jwv-H3-HZU" secondAttribute="leading" id="sSj-u1-7NP"/>
+                            <constraint firstItem="7TQ-5w-afi" firstAttribute="centerX" secondItem="Gw4-Is-XCO" secondAttribute="centerX" id="uAB-8Y-Kza"/>
+                            <constraint firstItem="jJA-RJ-WqN" firstAttribute="top" secondItem="7ES-me-zyF" secondAttribute="bottom" constant="8" id="vd1-iC-2mT"/>
+                            <constraint firstItem="Clq-xK-sTx" firstAttribute="leading" secondItem="8mF-UF-8zg" secondAttribute="trailing" constant="8" symbolic="YES" id="vhg-4U-rN7"/>
+                            <constraint firstItem="Gdw-6o-6PY" firstAttribute="top" secondItem="Jwv-H3-HZU" secondAttribute="top" id="zUN-AG-4FM"/>
+                            <constraint firstItem="e8H-DX-ivG" firstAttribute="trailing" secondItem="Riz-JP-fmv" secondAttribute="trailing" id="zwY-LY-vN1"/>
                         </constraints>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Bild wählen" id="8hD-xw-ac8">
-                        <barButtonItem key="rightBarButtonItem" title="weiter" id="rR0-3T-ASd">
+                        <barButtonItem key="rightBarButtonItem" title="Weiter" id="rR0-3T-ASd">
                             <connections>
                                 <segue destination="1Ng-LW-fbJ" kind="push" identifier="showUploadForm" id="Gbi-5i-HIg"/>
                             </connections>
@@ -225,15 +231,16 @@
         <scene sceneID="N8S-oP-wgS">
             <objects>
                 <viewController storyboardIdentifier="SGUploadController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Ng-LW-fbJ" customClass="SGUploadController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="auf-m5-2Qz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ftx-xi-JtV"/>
+                    </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="MtV-OQ-Py0">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="expirationField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gültigkeit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2SD-dF-Xa4">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="191" id="2Jv-Th-3AZ"/>
-                                    <constraint firstAttribute="height" constant="30" id="dTP-l5-k2Y"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="162" width="191" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -241,59 +248,59 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNo-4E-FGM">
+                                <rect key="frame" x="120" y="231" width="80" height="42"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="ChM-ed-lff"/>
-                                    <constraint firstAttribute="width" constant="80" id="oMm-rp-riy"/>
+                                    <constraint firstAttribute="height" constant="42" id="I5Z-Ll-QQv"/>
+                                    <constraint firstAttribute="width" constant="80" id="SZO-Z4-xSm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Upload">
                                     <color key="titleColor" red="0.062177097870000003" green="0.41655416010000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
                                     <action selector="upload:" destination="1Ng-LW-fbJ" eventType="touchUpInside" id="wdQ-Xh-c3J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJS-mM-h6l">
+                                <rect key="frame" x="219" y="162" width="78" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="mhE-bq-5eO"/>
+                                    <constraint firstAttribute="width" constant="78" id="zim-QF-TrS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Wählen">
                                     <color key="titleColor" red="0.062177097870000003" green="0.41655416010000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
                                     <action selector="chooseValidity:" destination="1Ng-LW-fbJ" eventType="touchUpInside" id="XpR-nY-qLM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1. Wähle eine Gültigkeitsdauer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd1-o4-qkV">
+                                <rect key="frame" x="20" y="131" width="277" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2. Starte Upload" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e39-yX-Ugy">
+                                <rect key="frame" x="20" y="200" width="280" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Aktuelle Dateigöße" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nT-xz-YEr">
+                                <rect key="frame" x="20" y="102" width="280" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="pJr-8d-dSc"/>
+                                    <constraint firstAttribute="height" constant="21" id="gqp-FP-s9N"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dateiname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYe-AF-mnw">
+                                <rect key="frame" x="20" y="73" width="280" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="fDF-7J-VIa"/>
+                                    <constraint firstAttribute="height" constant="21" id="cit-pD-5Cj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -301,27 +308,29 @@
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="e39-yX-Ugy" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1mK-Vj-Feh"/>
-                            <constraint firstItem="e39-yX-Ugy" firstAttribute="centerX" secondItem="lNo-4E-FGM" secondAttribute="centerX" type="default" id="2n8-aZ-Khu"/>
-                            <constraint firstAttribute="trailing" secondItem="aYe-AF-mnw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="70k-4n-9ZZ"/>
-                            <constraint firstItem="e39-yX-Ugy" firstAttribute="centerX" secondItem="MtV-OQ-Py0" secondAttribute="centerX" type="default" id="8Gh-Sz-kac"/>
-                            <constraint firstAttribute="bottom" secondItem="lNo-4E-FGM" secondAttribute="bottom" constant="196" id="AoR-WY-fpF"/>
-                            <constraint firstItem="e39-yX-Ugy" firstAttribute="top" secondItem="2SD-dF-Xa4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BdN-fs-Fba"/>
-                            <constraint firstItem="lNo-4E-FGM" firstAttribute="top" secondItem="e39-yX-Ugy" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Bjm-pU-NyY"/>
-                            <constraint firstItem="2SD-dF-Xa4" firstAttribute="top" secondItem="Fd1-o4-qkV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Bt1-Md-4D4"/>
-                            <constraint firstItem="mJS-mM-h6l" firstAttribute="top" secondItem="Fd1-o4-qkV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LhT-3A-zS3"/>
-                            <constraint firstAttribute="trailing" secondItem="7nT-xz-YEr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="O95-Tb-Y2f"/>
-                            <constraint firstItem="Fd1-o4-qkV" firstAttribute="top" secondItem="7nT-xz-YEr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Quk-2O-pYM"/>
-                            <constraint firstItem="aYe-AF-mnw" firstAttribute="top" secondItem="MtV-OQ-Py0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="T7E-XN-xe4"/>
-                            <constraint firstItem="2SD-dF-Xa4" firstAttribute="leading" secondItem="MtV-OQ-Py0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="WwS-Yq-cW9"/>
-                            <constraint firstItem="7nT-xz-YEr" firstAttribute="top" secondItem="aYe-AF-mnw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cXP-fy-Wgy"/>
-                            <constraint firstItem="e39-yX-Ugy" firstAttribute="leading" secondItem="MtV-OQ-Py0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cdC-I8-5KL"/>
-                            <constraint firstItem="Fd1-o4-qkV" firstAttribute="leading" secondItem="MtV-OQ-Py0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lAB-dp-VUa"/>
-                            <constraint firstItem="mJS-mM-h6l" firstAttribute="leading" secondItem="2SD-dF-Xa4" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="n03-YU-EYg"/>
-                            <constraint firstItem="7nT-xz-YEr" firstAttribute="leading" secondItem="MtV-OQ-Py0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nRv-Gk-log"/>
-                            <constraint firstItem="Fd1-o4-qkV" firstAttribute="trailing" secondItem="mJS-mM-h6l" secondAttribute="trailing" type="default" id="qO2-EU-nFZ"/>
-                            <constraint firstItem="e39-yX-Ugy" firstAttribute="top" secondItem="mJS-mM-h6l" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zBh-qs-cAd"/>
-                            <constraint firstItem="aYe-AF-mnw" firstAttribute="leading" secondItem="MtV-OQ-Py0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zaE-Bg-cqU"/>
+                            <constraint firstAttribute="trailing" secondItem="Fd1-o4-qkV" secondAttribute="trailing" constant="23" id="5Zw-ha-kkf"/>
+                            <constraint firstItem="aYe-AF-mnw" firstAttribute="top" secondItem="auf-m5-2Qz" secondAttribute="bottom" constant="9" id="6Ri-EY-5b9"/>
+                            <constraint firstItem="mJS-mM-h6l" firstAttribute="leading" secondItem="2SD-dF-Xa4" secondAttribute="trailing" constant="8" symbolic="YES" id="FaP-yx-Qz6"/>
+                            <constraint firstItem="mJS-mM-h6l" firstAttribute="trailing" secondItem="Fd1-o4-qkV" secondAttribute="trailing" id="HHM-3w-vkW"/>
+                            <constraint firstItem="7nT-xz-YEr" firstAttribute="trailing" secondItem="aYe-AF-mnw" secondAttribute="trailing" id="K2f-TM-3sR"/>
+                            <constraint firstItem="2SD-dF-Xa4" firstAttribute="leading" secondItem="Fd1-o4-qkV" secondAttribute="leading" id="Khb-xA-00D"/>
+                            <constraint firstItem="ftx-xi-JtV" firstAttribute="top" secondItem="lNo-4E-FGM" secondAttribute="bottom" constant="207" id="LZU-YB-Uxn"/>
+                            <constraint firstItem="aYe-AF-mnw" firstAttribute="leading" secondItem="7nT-xz-YEr" secondAttribute="leading" id="MVG-ym-DW5"/>
+                            <constraint firstItem="Fd1-o4-qkV" firstAttribute="leading" secondItem="7nT-xz-YEr" secondAttribute="leading" id="Ojj-Ao-IhI"/>
+                            <constraint firstItem="lNo-4E-FGM" firstAttribute="top" secondItem="e39-yX-Ugy" secondAttribute="bottom" constant="8" symbolic="YES" id="Spg-Ok-sVD"/>
+                            <constraint firstAttribute="trailing" secondItem="aYe-AF-mnw" secondAttribute="trailing" constant="20" symbolic="YES" id="VLp-Mk-9oX"/>
+                            <constraint firstItem="2SD-dF-Xa4" firstAttribute="top" secondItem="mJS-mM-h6l" secondAttribute="top" id="XGC-rd-7mT"/>
+                            <constraint firstItem="e39-yX-Ugy" firstAttribute="centerX" secondItem="lNo-4E-FGM" secondAttribute="centerX" id="YyF-Rf-eKs"/>
+                            <constraint firstItem="aYe-AF-mnw" firstAttribute="leading" secondItem="MtV-OQ-Py0" secondAttribute="leading" constant="20" symbolic="YES" id="aQM-js-ryj"/>
+                            <constraint firstItem="e39-yX-Ugy" firstAttribute="leading" secondItem="2SD-dF-Xa4" secondAttribute="leading" id="bQ8-EI-ahy"/>
+                            <constraint firstItem="7nT-xz-YEr" firstAttribute="top" secondItem="aYe-AF-mnw" secondAttribute="bottom" constant="8" symbolic="YES" id="blZ-Vb-bxA"/>
+                            <constraint firstItem="mJS-mM-h6l" firstAttribute="top" secondItem="Fd1-o4-qkV" secondAttribute="bottom" constant="8" symbolic="YES" id="dMD-0V-Z1z"/>
+                            <constraint firstItem="e39-yX-Ugy" firstAttribute="trailing" secondItem="7nT-xz-YEr" secondAttribute="trailing" id="fun-8s-AWS"/>
+                            <constraint firstItem="e39-yX-Ugy" firstAttribute="top" secondItem="2SD-dF-Xa4" secondAttribute="bottom" constant="8" symbolic="YES" id="gPu-mf-N00"/>
+                            <constraint firstItem="2SD-dF-Xa4" firstAttribute="top" secondItem="Fd1-o4-qkV" secondAttribute="bottom" constant="8" symbolic="YES" id="ii9-kb-rSN"/>
+                            <constraint firstItem="Fd1-o4-qkV" firstAttribute="top" secondItem="7nT-xz-YEr" secondAttribute="bottom" constant="8" symbolic="YES" id="kBv-me-ot1"/>
+                            <constraint firstItem="7nT-xz-YEr" firstAttribute="centerX" secondItem="MtV-OQ-Py0" secondAttribute="centerX" id="nlS-uk-oF8"/>
+                            <constraint firstItem="2SD-dF-Xa4" firstAttribute="bottom" secondItem="mJS-mM-h6l" secondAttribute="bottom" id="rMo-TR-kXJ"/>
                         </constraints>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Upload" id="1Zv-GY-ko4"/>
@@ -339,44 +348,6 @@
             <point key="canvasLocation" x="763" y="40"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="plus.png" width="20" height="20"/>
-    </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SGImagePickerController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SGImagePickerController.h"/>
-            <relationships>
-                <relationship kind="action" name="changeQuality:"/>
-                <relationship kind="action" name="chooseImageSize:"/>
-                <relationship kind="action" name="pickFromLibrary:"/>
-                <relationship kind="outlet" name="fileSizeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imageSizeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="imageSizeField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="qualityLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="qualitySlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="selectFileButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SGUploadController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SGUploadController.h"/>
-            <relationships>
-                <relationship kind="action" name="chooseValidity:"/>
-                <relationship kind="action" name="inputAccessoryViewDidFinish:"/>
-                <relationship kind="action" name="upload:"/>
-                <relationship kind="outlet" name="expiresField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="fileSizeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="filenameLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="allButtons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SGUploadsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SGUploadsTableViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

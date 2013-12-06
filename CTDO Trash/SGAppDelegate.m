@@ -19,36 +19,36 @@ SGAppDelegate const *appDelegate;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     appDelegate = self;
     
-    UIColor *blue = UIColorFromHEX(0x1F73FF);
-    UIImage *img = [UIImage imageNamed:@"escheresque"];
-    
-    [[UINavigationBar appearance] setBackgroundImage:img
-                                       forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{
-     //UITextAttributeFont:[UIFont fontWithName:@"Verdana" size:18],
-                                UITextAttributeTextColor:[UIColor darkTextColor],
-                          UITextAttributeTextShadowColor:[UIColor clearColor]}];
-    
-    [[UITabBar appearance] setBackgroundImage:img];
-    [[UITabBar appearance] setSelectedImageTintColor:blue];
-    [[UIToolbar appearance] setBackgroundImage:img forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
-    
-    img = [UIImage imageNamed:@"empty"];
-    [[UIBarButtonItem appearance] setBackgroundImage:img
-                                            forState:UIControlStateNormal
-                                          barMetrics:UIBarMetricsDefault];
-    
-    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
-     //UITextAttributeFont:[UIFont fontWithName:@"Verdana" size:14],
-                                UITextAttributeTextColor:blue,
-                          UITextAttributeTextShadowColor:[UIColor clearColor]}
-                                                forState:UIControlStateNormal];
-    
-    
-    img = [UIImage imageNamed:@"empty-40"];
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:img
-                                                      forState:UIControlStateNormal
-                                                    barMetrics:UIBarMetricsDefault];
+//    UIColor *blue = UIColorFromHEX(0x1F73FF);
+//    UIImage *img = [UIImage imageNamed:@"escheresque"];
+//    
+//    [[UINavigationBar appearance] setBackgroundImage:img
+//                                       forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance] setTitleTextAttributes:@{
+//     //UITextAttributeFont:[UIFont fontWithName:@"Verdana" size:18],
+//                                UITextAttributeTextColor:[UIColor darkTextColor],
+//                          UITextAttributeTextShadowColor:[UIColor clearColor]}];
+//    
+//    [[UITabBar appearance] setBackgroundImage:img];
+//    [[UITabBar appearance] setSelectedImageTintColor:blue];
+//    [[UIToolbar appearance] setBackgroundImage:img forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+//    
+//    img = [UIImage imageNamed:@"empty"];
+//    [[UIBarButtonItem appearance] setBackgroundImage:img
+//                                            forState:UIControlStateNormal
+//                                          barMetrics:UIBarMetricsDefault];
+//    
+//    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
+//     //UITextAttributeFont:[UIFont fontWithName:@"Verdana" size:14],
+//                                UITextAttributeTextColor:blue,
+//                          UITextAttributeTextShadowColor:[UIColor clearColor]}
+//                                                forState:UIControlStateNormal];
+//    
+//    
+//    img = [UIImage imageNamed:@"empty-40"];
+//    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:img
+//                                                      forState:UIControlStateNormal
+//                                                    barMetrics:UIBarMetricsDefault];
     
     self.httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://trash.ctdo.de"]];
     [self.httpClient setDefaultHeader:@"User-Agent"

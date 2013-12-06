@@ -305,7 +305,10 @@ static DejalActivityView *dejalActivityView = nil;
     if (!CGAffineTransformIsIdentity(self.borderView.transform))
         return;
     
-    CGSize textSize = [self.activityLabel.text sizeWithFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    //CGSize textSize = [self.activityLabel.text sizeWithFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    CGSize textSize = [self.activityLabel.text sizeWithAttributes:@{
+                                                                    NSFontAttributeName:
+                                                                        [UIFont systemFontOfSize:[UIFont systemFontSize]]}];
     
     // Use the fixed width if one is specified:
     if (self.labelWidth > 10)
@@ -564,7 +567,16 @@ static DejalActivityView *dejalActivityView = nil;
     self.frame = [self enclosingFrame];
     
     CGSize maxSize = CGSizeMake(260, 400);
-    CGSize textSize = [self.activityLabel.text sizeWithFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]] constrainedToSize:maxSize lineBreakMode:self.activityLabel.lineBreakMode];
+    //CGSize textSize = [self.activityLabel.text sizeWithFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]] constrainedToSize:maxSize lineBreakMode:self.activityLabel.lineBreakMode];
+    NSMutableParagraphStyle *para = [NSMutableParagraphStyle new];
+    para.lineBreakMode = self.activityLabel.lineBreakMode;
+    CGSize textSize = [self.activityLabel.text boundingRectWithSize:maxSize
+                                                            options:NSStringDrawingUsesLineFragmentOrigin
+                                                         attributes:@{
+                                                                      NSFontAttributeName:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]],
+                                                                      NSParagraphStyleAttributeName:para
+                                                                      }
+                                                            context:nil].size;
     
     // Use the fixed width if one is specified:
     if (self.labelWidth > 10)
